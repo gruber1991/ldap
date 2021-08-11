@@ -446,8 +446,8 @@ func (l *Conn) processMessages() {
 			close(msgCtx.responses)
 			delete(l.messageContexts, messageID)
 		}
-		close(l.chanMessageID)
-		close(l.chanConfirm)
+		// close(l.chanMessageID)
+		// close(l.chanConfirm)
 	}()
 
 	var messageID int64 = 1
